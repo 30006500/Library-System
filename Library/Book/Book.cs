@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Book
 {
-    class Book
+
+    public class Book
     {
         string title;
         string authorlname;
@@ -14,6 +15,9 @@ namespace Book
         string category;
         string location;
         double isbn;
+        static void Main(string[] args)
+        {
+        }
 
         public Book(string _title, string _authorlname, string _authorfname, string _category, string _location, double _isbn)
         {
@@ -24,7 +28,7 @@ namespace Book
             _location = location;
             _isbn = isbn;
         }
-
+        
         public string Title
         {
             get
@@ -45,7 +49,7 @@ namespace Book
             }
             set
             {
-                authorlname = value
+                authorlname = value;
             }
         }
 
@@ -96,3 +100,4 @@ namespace Book
         }
     }
 }
+

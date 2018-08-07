@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{848CEB7A-6ECD-45F1-B7B1-F5E9BB1D91D9}</ProjectGuid>
+    <ProjectGuid>{0868E438-C6A0-410B-AD4C-5A621D11BBEC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Add</RootNamespace>
-    <AssemblyName>Add</AssemblyName>
+    <RootNamespace>Temp</RootNamespace>
+    <AssemblyName>Temp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Add\Add.csproj">
+      <Project>{848ceb7a-6ecd-45f1-b7b1-f5e9bb1d91d9}</Project>
+      <Name>Add</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Book\Book.csproj">
       <Project>{5748401a-b34b-42ec-8315-e4ac9942a157}</Project>
       <Name>Book</Name>
