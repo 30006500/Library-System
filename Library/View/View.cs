@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Booktest;
+using Book;
 
 namespace View
 {
@@ -17,8 +17,9 @@ namespace View
             //_category = category;
             //_location = location;
             //_isbn = isbn;
-            Console.WriteLine("Type in the book and number");
-            Console.ReadLine();
+            //Console.WriteLine("Type in the book and number");
+            //Get {return _title};
+            //Console.ReadLine();
         }
     }
 }
