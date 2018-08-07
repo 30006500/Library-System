@@ -90,3 +90,14 @@ namespace Add
 
     }
 }
+/* 
+Book1
+
+    Console.WriteLine("Title: {0}", Add.Program.Book1.Title); 
+    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
+    Console.WriteLine("Author First Name: {0}", Add.Program.Book1.AuthorFName);
+    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
+    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
+    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
+    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
+*/
