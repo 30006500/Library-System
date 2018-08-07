@@ -45,7 +45,7 @@ namespace Book
             }
             set
             {
-                authorlname = value
+                authorlname = value;
             }
         }
 
