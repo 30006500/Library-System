@@ -14,6 +14,7 @@ namespace Library
         static void Main(string[] args)
         {
             int option = 0;
+            bool check = true;
             do
             {
                 Console.Clear();
@@ -22,37 +23,53 @@ namespace Library
                 Console.WriteLine("1) Add Or Edit A Book");
                 Console.WriteLine("2) View Details Of A Book");
                 Console.WriteLine("3) Exit");
-                option = int.Parse(Console.ReadLine());
-
-                switch (option)
+                check = int.TryParse(Console.ReadLine(), out option);
+                if (check == false)
                 {
-                    case 1:
-                        string password = "Password";
-                        Console.WriteLine("Please enter your password");
-                        string pass = Console.ReadLine();
-                        if (pass == password)
-                        {
-                            Add.Program.Main();
-                        }
-                        else
-                        {
-                            Console.WriteLine("Incorrect Password");
-                            Console.ReadLine();
-                        }
-                        
-                    break;
-                    case 2:
-                        //View.Program.Main();
-                        break;
-                    case 3:
-                        break;
-                    default:
-                        break;
-
-
+                    Console.WriteLine("Invalid entry, please enter a number");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
                 }
-            } while (option != 3);
 
+                else if (option > 7)
+                {
+                    Console.WriteLine("Please enter a number between 1 and 7");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
+                else
+                {
+
+                    switch (option)
+                    {
+                        case 1:
+                            string password = "Password";
+                            Console.WriteLine("Please enter your password");
+                            string pass = Console.ReadLine();
+                            if (pass == password)
+                            {
+                                Add.Program.Main();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Incorrect Password");
+                                Console.ReadLine();
+                            }
+
+                            break;
+                        case 2:
+                            View.Program.Main();
+                            break;
+                        case 3:
+                            break;
+                        default:
+                            break;
+
+
+                    }
+                }
+                } while (option != 3) ;
+            
         }
     }
 }

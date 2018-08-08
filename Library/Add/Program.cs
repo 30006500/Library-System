@@ -11,15 +11,16 @@ namespace Add
 
     {
         static int menu = 0;
-        static Book.Book Book1 = new Book.Book("", "", "", "", "", 0);
-        static Book.Book Book2 = new Book.Book("", "", "", "", "", 0);
-        static Book.Book Book3 = new Book.Book("", "", "", "", "", 0);
-        static Book.Book Book4 = new Book.Book("", "", "", "", "", 0);
-        static Book.Book Book5 = new Book.Book("", "", "", "", "", 0);
-        static Book.Book Book6 = new Book.Book("", "", "", "", "", 0);
+        public static Book.Book Book1 = new Book.Book("", "", "", "", "", 0);
+        public static Book.Book Book2 = new Book.Book("", "", "", "", "", 0);
+        public static Book.Book Book3 = new Book.Book("", "", "", "", "", 0);
+        public static Book.Book Book4 = new Book.Book("", "", "", "", "", 0);
+        public static Book.Book Book5 = new Book.Book("", "", "", "", "", 0);
+        public static Book.Book Book6 = new Book.Book("", "", "", "", "", 0);
 
         public static void Main()
         {
+            bool check = true;
             
             do
             {
@@ -34,37 +35,52 @@ namespace Add
                 Console.WriteLine("5) Add or edit book with ISBN: {0}", Add.Program.Book5.ISBN);
                 Console.WriteLine("6) Add or edit book with ISBN: {0}", Add.Program.Book6.ISBN);
                 Console.WriteLine("7) Return to the main menu");
-                menu = int.Parse(Console.ReadLine());
-                switch (menu)
+                check = int.TryParse(Console.ReadLine(), out menu);
+                if (check == false)
                 {
-                    case 1:                        
-                        Add.Program.NewBook(Book1);                  
-                        break;
-                    case 2:
-                        Add.Program.NewBook(Book2);
-                        break;
-                    case 3:
-                        Add.Program.NewBook(Book3);
-                        break;
-                    case 4:
-                        Add.Program.NewBook(Book4);
-                        break;
-                    case 5:
-                        Add.Program.NewBook(Book5);
-                        break;
-                    case 6:
-                        Add.Program.NewBook(Book6);
-                        break;
-                    case 7:
-                        break;
-                    default:
-                        break;
-
-
-
-
+                    Console.WriteLine("Invalid entry, please enter a number");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
                 }
 
+                else if (menu > 7)
+                {
+                    Console.WriteLine("Please enter a number between 1 and 7");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    switch (menu)
+                    {
+                        case 1:
+                            Add.Program.NewBook(Book1);
+                            break;
+                        case 2:
+                            Add.Program.NewBook(Book2);
+                            break;
+                        case 3:
+                            Add.Program.NewBook(Book3);
+                            break;
+                        case 4:
+                            Add.Program.NewBook(Book4);
+                            break;
+                        case 5:
+                            Add.Program.NewBook(Book5);
+                            break;
+                        case 6:
+                            Add.Program.NewBook(Book6);
+                            break;
+                        case 7:
+                            break;
+                        default:
+                            break;
+
+
+
+
+                    }
+                }
             } while (menu != 7);
         }
 
