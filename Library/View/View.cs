@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Add;
 using Book;
 
 namespace View
 {
-    class View
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            //_title = title;
-            //_authorlname = authorlname;
-            //_authorfname = authorfname;
-            //_category = category;
-            //_location = location;
-            //_isbn = isbn;
-            //Console.WriteLine("Type in the book and number");
-            //Get {return _title};
-            //Console.ReadLine();
-        }
+            //Book1
+            Console.WriteLine("Please enter in a book name...ie(Book1)");
+            Console.ReadLine();
+            Console.WriteLine("Title: {0}", Add.Program.Book1.Title);
+            Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
+            Console.WriteLine("Author First Name: {0}", Add.Program.Book1.AuthorFName);
+            Console.WriteLine("Category: {0}", Add.Program.Book1.Category);
+            Console.WriteLine("Location: {0}", Add.Program.Book1.Location);
+            Console.WriteLine("ISBN: {0}", Add.Program.Book1.ISBN);
+        }   
     }
-}
+} //static Book.Book Book1 = new Book.Book("", "", "", "", "", 0);
