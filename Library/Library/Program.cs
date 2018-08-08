@@ -31,9 +31,9 @@ namespace Library
                     Console.ReadLine();
                 }
 
-                else if (option > 7)
+                else if (option > 3)
                 {
-                    Console.WriteLine("Please enter a number between 1 and 7");
+                    Console.WriteLine("Please enter a number between 1 and 3");
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                 }
