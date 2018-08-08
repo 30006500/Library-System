@@ -40,8 +40,8 @@ namespace Library
                             Console.ReadLine();
                         }
                         
-                            break;
-                                            case 2:
+                    break;
+                    case 2:
                         //View.Program.Main();
                         break;
                     case 3:

@@ -96,8 +96,7 @@ Book1
     Console.WriteLine("Title: {0}", Add.Program.Book1.Title); 
     Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
     Console.WriteLine("Author First Name: {0}", Add.Program.Book1.AuthorFName);
-    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
-    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
-    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
-    Console.WriteLine("Author Last Name: {0}", Add.Program.Book1.AuthorLName);
-*/
+    Console.WriteLine("Category: {0}", Add.Program.Book1.Category);
+    Console.WriteLine("Location: {0}", Add.Program.Book1.Location);
+    Console.WriteLine("ISBN: {0}", Add.Program.Book1.ISBN);
+    */
