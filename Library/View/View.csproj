@@ -42,12 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Booktest.cs" />
     <Compile Include="View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Add\Add.csproj">
+      <Project>{848ceb7a-6ecd-45f1-b7b1-f5e9bb1d91d9}</Project>
+      <Name>Add</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Book\Book.csproj">
+      <Project>{5748401a-b34b-42ec-8315-e4ac9942a157}</Project>
+      <Name>Book</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
